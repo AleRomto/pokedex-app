@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <PokedexView />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PokedexView from "./components/PokedexView.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    PokedexView,
+  },
+};
 </script>
 
 <style>
+body {
+  background-color: #f0f0f0;
+  font-family: "Arial", sans-serif;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  color: #ff0000;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-card {
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
